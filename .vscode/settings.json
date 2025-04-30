@@ -1,3 +1,12 @@
 {
-    "secrets.enabledFolders": []
+    "secrets.enabledFolders": [],
+    "Codegeex.Chat.fontSize": 13,
+    "Codegeex.RepoIndex": true,
+    "Codegeex.SidebarUI.LanguagePreference": "English",
+    "Codegeex.CompletionDelay": 1,
+    "Codegeex.GenerationPreference": "block",
+    "Codegeex.CommitMessageStyle": "Default",
+    "Codegeex.CommitMessage.LanguagePreference": "English",
+    "Codegeex.Chat.LanguagePreference": "English",
+    "Codegeex.Comment.LanguagePreference": "English"
 }

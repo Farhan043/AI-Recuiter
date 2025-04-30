@@ -1,4 +1,5 @@
 "use client";
+// Importing necessary modules and components
 import { useUser } from "@/app/provider";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/services/supabaseClient";
@@ -6,8 +7,11 @@ import { Camera, Video } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import InterviewCard from "../dashboard/_components/InterviewCard";
 
+// Function to display all previously created interviews
 function AllInterview() {
+  // State to store the list of interviews
   const [interviewList, setInterviewList] = useState([]);
+  // Destructuring the user from the useUser hook
   const { user } = useUser();
 
   useEffect(() => {
