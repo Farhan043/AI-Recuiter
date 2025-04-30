@@ -11,6 +11,7 @@ function Interview() {
   const { interview_id } = useParams();
   const [interviewData, setInterviewData] = useState();
   const [userName, setUserName] = useState();
+  const [userEmail, setUserEmail] = useState();
   const [loading, setLoading] = useState(false);
   const { interviewInfo, setInterviewInfo } = useContext(InterviewDataContext);
   const router = useRouter();
@@ -48,6 +49,7 @@ function Interview() {
 
     setInterviewInfo({
         userName: userName,
+        userEmail: userEmail,
         interviewData: Interviews[0],
     });
     router.push('/interview/' + interview_id + '/start');
@@ -100,6 +102,23 @@ function Interview() {
             onChange={(e) => setUserName(e.target.value)}
             // value={userName}
             placeholder="e.g. John Smith"
+            className="w-full border border-gray-300 rounded-md px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+
+        <div className="mb-8">
+          <label
+            className="block text-gray-700 text-sm mb-2"
+            htmlFor="fullName"
+          >
+            Enter your full name
+          </label>
+          <input
+            id="email"
+            type="email"
+            onChange={(e) => setUserEmail(e.target.value)}
+            // value={userName}
+            placeholder="e.g. John@gmail.com"
             className="w-full border border-gray-300 rounded-md px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
