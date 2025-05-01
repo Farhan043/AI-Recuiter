@@ -7,12 +7,14 @@ import FormContainer from './_components/FormContainer';
 import QuestionList from './_components/QuestionList';
 import { toast } from 'sonner';
 import InterviewLink from './_components/InterviewLink';
+import { useUser } from '@/app/provider';
 
 function CreateInterview() {
   const router = useRouter()
-  const [step, setStep] = useState(3);
+  const [step, setStep] = useState(1);
   const [formData, setFormData] = useState();
   const [interviewId, setInterviewId] = useState()
+  const {user} = useUser();
 
 // const OnGoToNext = () => {
 //   if(!formData?.jobPosition || !formData?.jobDescription || !formData?.duration || !formData?.type) 
@@ -25,6 +27,10 @@ function CreateInterview() {
 //   }
 
   const OnGoToNext = () => {
+    if (user?.credits<=0) {
+      toast.success("Please buy credits to create an interview");
+      return
+    }
     if (
       !formData?.jobPosition?.trim() ||
       !formData?.jobDescription?.trim() ||

@@ -26,7 +26,7 @@ import Link from "next/link";
           <img src="/logo.png" alt="Logo" className="w-10 h-10" />
           <h2 className="text-lg font-bold">AI<span className="text-blue-700">Cruiter</span></h2>
         </div>
-        <Button className="cursor-pointer mt-4"><Plus />Create New Interview</Button>
+        <Button  className="cursor-pointer mt-4"><Plus />Create New Interview</Button>
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
